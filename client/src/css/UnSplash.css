@@ -1,24 +1,242 @@
-/* .containercard{
-    background-color: antiquewhite;
-    object-fit:contain;
-    opacity: 0;
-    margin: 0;
-    padding: 0;
+
+/* menor o igual a 576px */
+@media screen and (max-width: 576px){
+    
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+        grid-gap: 20px;
+        padding:20px; 
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 500ms ease-out;
+     
+     
+     }
+     
+     .label-text{
+        color: aliceblue;
+        font-size: larger;
+        font-weight: 600;
+     
+     }
+     .figurecont{
+         position: relative;
+         overflow: hidden;
+         box-shadow: 0px 15px 25px;
+         border-radius: 15px;
+        
+     }
+     
+     .closeBtn{
+         
+         position: absolute;
+         top:10%;
+         left:90%;
+         padding: 8px;
+         transition: all 500ms ease-out;
+         transform: translate(-50%, -50%);
+         width: fit-content;
+         height: fit-content;
+         background-color: rgba(233, 27, 27, 0.545);
+         color: aliceblue;
+         border: 2px solid rgb(197, 198, 199);
+     }
+     .closeBtn:hover{
+         background-color: rgba(233, 27, 27, 0.854);
+     }
+     
+     
+     .contenedor-texto{
+        width:max-content;
+       
+        position: absolute;
+        top:90%;
+        left:30%;
+        
+        transition: all 500ms ease-out;
+        transform: translate(-50%, -50%);
+       
+     }
+     
+     /* .figurecont:hover >  .contenedor-texto{
+         opacity: 1;
+         visibility: visible;
+     }
+     .figurecont:hover >  .closeBtn{
+         opacity: 1;
+         visibility: visible;
+     } */
+
 }
-.figurecont{
-    object-fit:contain;
-   background-size:contain;
-   background-repeat: no-repeat;
-    width: 30%;
-    margin: 10px !important;
-    padding: 0;
-    box-sizing:border-box; 
-    background-color: antiquewhite;
-} */
-.contenedor-grid{
+
+/* mayor o igual a 576 */
+
+@media screen and (min-width: 576px){
+   
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+        grid-gap: 40px;
+        padding:40px; 
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 500ms ease-out;
+     
+     
+     }
+     
+     .label-text{
+        color: aliceblue;
+        font-size: large;
+        font-weight: 400;
+     
+     }
+     .figurecont{
+         position: relative;
+         overflow: hidden;
+         box-shadow: 0px 15px 25px;
+         border-radius: 15px;
+         width: 90%;
+         height: 90%;
+        
+     }
+     
+     .closeBtn{
+        
+         position: absolute;
+         top:10%;
+         left:90%;
+         padding: 8px;
+         transition: all 500ms ease-out;
+         transform: translate(-50%, -50%);
+         width: fit-content;
+         height: fit-content;
+         background-color: rgba(233, 27, 27, 0.545);
+         color: aliceblue;
+         border: 2px solid rgb(197, 198, 199);
+     }
+     .closeBtn:hover{
+         background-color: rgba(233, 27, 27, 0.854);
+     }
+     
+     
+     .contenedor-texto{
+        width:max-content;
+        
+        position: absolute;
+        top:90%;
+        left:50%;
+        
+        transition: all 500ms ease-out;
+        transform: translate(-50%, -50%);
+        
+     }
+     
+    /*  .figurecont:hover >  .contenedor-texto{
+         opacity: 1;
+         visibility: visible;
+     }
+     .figurecont:hover >  .closeBtn{
+         opacity: 1;
+         visibility: visible;
+     } */
+
+}
+
+/* mayor o igual a 768 */
+@media screen and (min-width: 768px){
+
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        
+        grid-gap: 40px;
+        padding:60px; 
+    }
+
+    .image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 500ms ease-out;
+     
+     
+     }
+     
+     .label-text{
+        color: aliceblue;
+        font-size: large;
+        font-weight: 400;
+     
+     }
+     .figurecont{
+         position: relative;
+         overflow: hidden;
+         box-shadow: 0px 15px 25px;
+         border-radius: 15px;
+        
+     }
+     
+     .closeBtn{
+         
+         position: absolute;
+         top:10%;
+         left:90%;
+         padding: 8px;
+         transition: all 500ms ease-out;
+         transform: translate(-50%, -50%);
+         width: fit-content;
+         height: fit-content;
+         background-color: rgba(28, 29, 29, 0.545);
+         color: aliceblue;
+         border: 2px solid rgb(197, 198, 199);
+     }
+     .closeBtn:hover{
+         background-color: rgba(233, 27, 27, 0.854);
+     }
+     
+     
+     .contenedor-texto{
+        width:max-content;
+        opacity: 0;
+        position: absolute;
+        top:90%;
+        left:50%;
+        
+        transition: all 500ms ease-out;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+     }
+     
+     .figurecont:hover >  .contenedor-texto{
+         opacity: 1;
+         visibility: visible;
+     }
+    /*  .figurecont:hover >  .closeBtn{
+         opacity: 1;
+         visibility: visible;
+     } */
+
+}
+
+/* tamaño promedio pantalla pc */
+
+@media screen and (min-width: 992px){
+    
+    .contenedor-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 30px;
     
@@ -33,17 +251,12 @@
 
 
 }
-/* .label-text{
-    opacity: 0;
-    position: absolute;
-    top:90%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-} */
+
 .label-text{
    color: aliceblue;
-   font-size: larger;
-   font-weight: bold;
+   font-size: large;
+   font-weight:400;
+
 
 }
 .figurecont{
@@ -53,18 +266,121 @@
     border-radius: 15px;
    
 }
+
+.closeBtn{
+    opacity: 0;
+    position: absolute;
+    top:10%;
+    left:90%;
+    padding: 8px;
+    transition: all 500ms ease-out;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(28, 29, 29, 0.545);
+    color: aliceblue;
+    border: 2px solid rgb(197, 198, 199);
+}
+.closeBtn:hover{
+    background-color: rgba(233, 27, 27, 0.854);
+}
+
+
 .contenedor-texto{
+    width:max-content;
     opacity: 0;
     position: absolute;
     top:90%;
-    left:30%;
-    right: 30%;
+    left:50%;
+    
     transition: all 500ms ease-out;
     transform: translate(-50%, -50%);
     visibility: hidden;
 }
 
-.figurecont:hover > .contenedor-texto{
+.figurecont:hover >  .contenedor-texto{
     opacity: 1;
     visibility: visible;
 }
+.figurecont:hover >  .closeBtn{
+    opacity: 1;
+    visibility: visible;
+}
+}
+/* mayor o igual a 1200 */
+@media screen and (min-width: 1200px){
+    
+    .contenedor-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 50px;
+    
+  
+}
+
+.image{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: all 500ms ease-out;
+
+
+}
+
+.label-text{
+   color: aliceblue;
+   font-size: large;
+   font-weight:400;
+
+
+}
+.figurecont{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px;
+    border-radius: 15px;
+   
+}
+
+.closeBtn{
+    opacity: 0;
+    position: absolute;
+    top:10%;
+    left:90%;
+    padding: 8px;
+    transition: all 500ms ease-out;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(28, 29, 29, 0.545);
+    color: aliceblue;
+    border: 2px solid rgb(197, 198, 199);
+}
+.closeBtn:hover{
+    background-color: rgba(233, 27, 27, 0.854);
+}
+
+
+.contenedor-texto{
+    width:max-content;
+    opacity: 0;
+    position: absolute;
+    top:90%;
+    left:50%;
+    
+    transition: all 500ms ease-out;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.figurecont:hover >  .contenedor-texto{
+    opacity: 1;
+    visibility: visible;
+}
+.figurecont:hover >  .closeBtn{
+    opacity: 1;
+    visibility: visible;
+}
+}
+

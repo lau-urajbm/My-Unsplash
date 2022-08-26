@@ -46,8 +46,24 @@ async function getImageByLabel(req,res){
     }
 }
 
+async function deleteImage(req, res){
+    const {id}=req.params
+    try{
+        let deleted = Image.destroy({
+            where:{
+                id
+            }
+        })
+        res.send({message:'the photo has been deleted'})
+
+}catch(err){
+    console.log(err)
+}
+}
+
 module.exports={
     getImages,
     postImage,
-    getImageByLabel
+    getImageByLabel,
+    deleteImage
 }
