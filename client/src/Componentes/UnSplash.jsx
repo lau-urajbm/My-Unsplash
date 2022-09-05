@@ -50,16 +50,17 @@ const UnSplash = () => {
     <div className='contenedor-grid'>
       {images.length >0&& images.map(img=>{
         return(
-          <figure className="figure figurecont " /* style={{backgroundImage: `url(${img.url})`}} */>
-             <button className='closeBtn rounded' title='delete' onClick={()=>handleDelete(img.id)}>X</button>
+          <div className=" figurecont " /* style={{backgroundImage: `url(${img.url})`}} */>
+             {/* <button className='closeBtn rounded' title='delete' onClick={()=>handleDelete(img.id)}>X</button> */}
 
-            <img src={img.url} className="rounded image" alt="..."></img>
+            <img src={img.url} className="rounded image" style={{width:'100%'}} alt="..."></img>
 
-            <div className='contenedor-texto'>
+            {/* <div className='contenedor-texto'>
              
-              <figcaption className="figure-caption label-text m-3">{img.label}</figcaption> </div>
+              <figcaption className="figure-caption label-text m-3">{img.label}</figcaption>
+               </div> */}
             
-          </figure>
+          </div>
           
         )
       })}

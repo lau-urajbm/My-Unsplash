@@ -1,6 +1,6 @@
 
 /* menor o igual a 576px */
-@media screen and (max-width: 576px){
+/* @media screen and (max-width: 576px){
     
     .contenedor-grid{
         display: grid;
@@ -71,13 +71,13 @@
      .figurecont:hover >  .closeBtn{
          opacity: 1;
          visibility: visible;
-     } */
+     } 
 
-}
+} */
 
 /* mayor o igual a 576 */
 
-@media screen and (min-width: 576px){
+/* @media screen and (min-width: 576px){
    
     .contenedor-grid{
         display: grid;
@@ -150,12 +150,12 @@
      .figurecont:hover >  .closeBtn{
          opacity: 1;
          visibility: visible;
-     } */
+     } 
 
-}
+} */
 
 /* mayor o igual a 768 */
-@media screen and (min-width: 768px){
+/* @media screen and (min-width: 768px){
 
     .contenedor-grid{
         display: grid;
@@ -226,12 +226,12 @@
     /*  .figurecont:hover >  .closeBtn{
          opacity: 1;
          visibility: visible;
-     } */
+     } 
 
-}
+} */
 
 /* tamaño promedio pantalla pc */
-
+/* 
 @media screen and (min-width: 992px){
     
     .contenedor-grid{
@@ -306,23 +306,36 @@
     opacity: 1;
     visibility: visible;
 }
-}
+} */
 /* mayor o igual a 1200 */
 @media screen and (min-width: 1200px){
     
     .contenedor-grid{
-    display: grid;
+   /*  display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    padding: 50px;
+    padding: 50px; */
+    
+    -webkit-column-count: 4 !important;
+    -moz-column-count: 3 !important;
+    column-count: 3 !important; 
+     -webkit-column-width: 33% !important; 
+    -moz-column-width: 33% !important;
+    column-width: 33% !important; 
+    margin: 20px;
+  
+   
+   gap: 20px;
+   
+    
     
   
 }
 
 .image{
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+  
+  width: 100%;
+   
    transition: all 500ms ease-out;
 
 
@@ -337,13 +350,16 @@
 }
 .figurecont{
     position: relative;
-    overflow: hidden;
+    
+   
+    margin: 30px 5px;
     box-shadow: 0px 10px 10px;
     border-radius: 15px;
    
+   
 }
 
-.closeBtn{
+/* .closeBtn{
     opacity: 0;
     position: absolute;
     top:10%;
@@ -381,6 +397,6 @@
 .figurecont:hover >  .closeBtn{
     opacity: 1;
     visibility: visible;
-}
+} */
 }
 
